@@ -63,18 +63,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('registrasi');
 	}
-	public function tambahDataAsset()
-	{
-		$this->load->view('beranda');
-	}
-	public function tambahDataInvestor()
-	{
-		$this->load->view('beranda');
-	}
-	public function tambahDataUser()
-	{
-		$this->load->view('beranda');
-	}
 	public function simpanAsset()
 	{
 		$this->load->model('Modeldata');
