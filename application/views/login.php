@@ -32,7 +32,6 @@
   <div class="login-logo">
     <b>Admin</b> Invest</a>
   </div>
-  <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Masuk untuk memulai sesi</p>
 
@@ -53,17 +52,13 @@
             </label>
           </div>
         </div>
-        <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Masuk</button>
+          <button type="submit" class="btn btn-success btn-block btn-flat">Masuk</button>
         </div>
-        <!-- /.col -->
       </div>
     </form>
   </div>
-  <!-- /.login-box-body -->
 </div>
-<!-- /.login-box -->
 
 <!-- jQuery 3 -->
 <script src="<?php echo base_url() ?>asset/bower_components/jquery/dist/jquery.min.js"></script>

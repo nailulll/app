@@ -1,5 +1,8 @@
 <div class="">
-	<h2>Klik dibawah ini untuk menambah data investor</h2> <a href="<?php echo base_url() ?>index.php/Welcome/tambahDataInvestor"><button class="btn btn-primary btn-md">Tambah Data</button></a>
+  <h3>Klik dibawah ini untuk menambah data</h3>
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default">
+    Tambah Data
+</button>
 </div>
 <br>
 <br>
@@ -14,22 +17,47 @@
         <th>Nama</th>
         <th>Alamat</th>
         <th>Keterangan</th>
+        <th>Aksi</th>
     </tr>
     <?php 
-        foreach ($data_investor as $tampilkan) {
-            echo "<tr>";
-                echo "<td>$tampilkan->id_investor</td>";
-                echo "<td>$tampilkan->nama</td>";
-                echo "<td>$tampilkan->alamat</td>";
-                echo "<td>$tampilkan->keterangan</td>";
-                echo "<td><a href='EditDataInvestor/$tampilkan->id_investor'<button class='btn btn-primary btn-xs'>Edit</button></a><button class='btn btn-danger btn-xs' type='button' onClick='hapus($tampilkan->id_investor)'>Hapus</button></td>";
-            echo "</tr>";
-        }
-     ?>
-    </table>
+    foreach ($data_investor as $tampilkan) {
+        echo "<tr>";
+        echo "<td>$tampilkan->id_investor</td>";
+        echo "<td>$tampilkan->nama</td>";
+        echo "<td>$tampilkan->alamat</td>";
+        echo "<td>$tampilkan->keterangan</td>";
+        echo "<td><a href='EditDataInvestor/$tampilkan->id_investor'<button class='btn btn-success btn-xs'>Edit</button></a><button class='btn btn-danger btn-xs' type='button' onClick='hapus($tampilkan->id_investor)'>Hapus</button></td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
 </div>
 </div>
-<!-- MODAL -->
+<!-- MODAL TAMBAH DATA -->
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">Tambah Data</h4>
+      </div>
+      <div class="modal-body">
+        <form action="<?php echo base_url() ?>index.php/Welcome/simpanInvestor" method="POST">
+          <input class="form-control input-lg" type="text" placeholder="Nama" name="nama">
+          <br>
+          <input class="form-control input-lg" type="text" placeholder="Alamat" name="alamat">
+          <br>
+          <input class="form-control input-lg" type="text" placeholder="Keterangan" name="keterangan">
+          <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Tutup</button>
+        <button type="submit" class="btn btn-success">Simpan</button>
+    </div>
+</form>
+</div>
+</div>
+</div>
+<!-- MODAL HAPUS -->
 <div class="modal modal-danger fade" id="modal-danger">
   <div class="modal-dialog">
     <div class="modal-content">

@@ -17,6 +17,6 @@
   </div>
 </div>
 <div class="">
-    <button class="btn btn-primary btn-md">Edit Data</button>
+    <button class="btn btn-success btn-md">Edit Data</button>
 </div>
   </form>
